@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BZK Serviços</title>
+    <!-- Importando a fonte Montserrat do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0d1b2a; /* Cor do fundo azul */
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* ESTILO DA LOGO DO TOPO */
+        .topo-logo {
+            max-width: 700px; /* AQUI ESTÁ O AJUSTE! Mudei de 100% para 350px */
+            width: 100%; /* Isso garante que se a tela for menor que 350px, ela se ajusta */
+            height: auto;
+            margin-bottom: 40px; /* Espaço entre o topo e o conteúdo principal */
+            align-self: center; /* Alinha à esquerda */
+        }
+
+        /* CAIXA PRINCIPAL (Banner e Botões abaixo da logo) */
+        .container-principal {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* COLUNA DA ESQUERDA (O Banner) */
+        .coluna-imagem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .banner {
+            max-width: 340px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* COLUNA DA DIREITA (O Texto e os Botões) */
+        .coluna-conteudo {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .mensagem {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #e0e6ed;
+        }
+        .mensagem strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+        .btn {
+            display: block;
+            padding: 12px 20px;
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #ffffff;
+            color: #0d1b2a;
+        }
+
+        /* Responsividade para celular (quando a tela fica estreita) */
+        @media (max-width: 768px) {
+            .topo-logo {
+                margin-bottom: 20px;
+                max-width: 250px; /* Fica menor no celular */
+            }
+            .container-principal {
+                flex-direction: column; /* Muda para uma coluna só */
+                gap: 30px;
+            }
+            .coluna-conteudo {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. LOGO DO TOPO: Utilizando serviçospopulares.png -->
+    <img src="serviçospopulares.png" alt="Serviços Populares" class="topo-logo">
+
+    <!-- 2. CAIXA GERAL: Une o banner e os botões abaixo -->
+    <div class="container-principal">
+
+        <!-- COLUNA DA ESQUERDA: BANNER -->
+        <div class="coluna-imagem">
+            <img src="banner1.png" alt="Divulgação do Serviço" class="banner">
+        </div>
+
+        <!-- COLUNA DA DIREITA: TEXTO E BOTÕES NA ORDEM CORRETA -->
+        <div class="coluna-conteudo">
+            
+            <p class="mensagem">
+                Sua Máquina está sem eficiência ou com problemas de funcionamento? Chama a <strong>SF (SERVIÇOS POPULARES)</strong> em um dos links abaixo:
+            </p>
+
+            <div class="links" style="margin-bottom: 15px;">
+                <a href="https://wa.me/5585991349782" target="_blank" class="btn">INSTALAÇÃO DE WALLBOX PARA CARROS ELÉTRICOS</a>
+            </div>
+
+            <div class="links">
+                <a href="https://wa.me/5585991349782?text=Olá,%20vim%20pelo%20site%20e%20preciso%20de%20ajuda%20com%20GELADEIRA" target="_blank" class="btn">GELADEIRA</a>
+                <a href="https://wa.me/5585991349782?text=Olá,%20vim%20pelo%20site%20e%20preciso%20de%20ajuda%20com%20MÁQUINA%20DE%20LAVAR%20ROUPA" target="_blank" class="btn">MÁQUINA DE LAVAR ROUPA</a>
+                <a href="https://wa.me/5585991349782?text=Olá,%20vim%20pelo%20site%20e%20preciso%20de%20ajuda%20com%20AR-CONDICIONADO" target="_blank" class="btn">AR-CONDICIONADO</a>
+                <a href="https://wa.me/5585991349782?text=Olá,%20vim%20pelo%20site%20e%20preciso%20de%20ajuda%20com%20FOGÃO" target="_blank" class="btn">FOGÃO</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
